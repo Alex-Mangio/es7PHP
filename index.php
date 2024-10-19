@@ -11,11 +11,16 @@ session_start();
 <body style="text-align:center"> 
     
     <h1>INSERISCI IL NOME E IL PUNTEGGIO DEL GIOCO</h1>
-    <form action="riepilogo.php" method="post">
-        <b>Nome:</b><input type="text" name="nomeGioco">
-        <b>Punteggio:</b><input type="number" min="0" max="1000" name="punteggioGioco"><br>
+    <form action="riepilogo.php" method="get">
+        <b>Nome:</b><input type="text" name="nomeGioco" required>
+        <b>Punteggio:</b><input type="number" min="0" max="1000" name="punteggioGioco" required><br>
         <br>
         <input type="submit" value="conferma" name="bottone">
     </form>
+    <br>
+    <form action="punteggio_max.php" method="get">
+        <input type="submit" value="punteggi max">
+    </form>
+    <a href="reset.php">Reset</a>
 </body>
 </html>
